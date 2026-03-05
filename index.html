@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green-Earth</title>
+    <!-- daisyUI and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-[#15803D] shadow-sm">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>About</a></li>
+                        <li>
+                            <a>Gallery</a>
+                        </li>
+                        <li><a>Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-xl text-white">Green Earth</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white font-medium">
+                    <li><a>About</a></li>
+                    <li><a>Gallery</a></li>
+                    <li><a>Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end ">
+                <a class="btn text-[#15803D] font-medium bg-[#FACC15] rounded-full">Plant a Tree</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="space-y-15 bg-[#F0FDF4]">
+
+        <!-- Hero-Section -->
+        <section class="Hero-section grid grid-cols-3 bg-[#CFF0DC] ">
+            <img src="./assets/hero-leaf1.png" alt="">
+            <div class="space-y-2 text-center flex flex-col items-center justify-center lg:gap-3">
+                <h1 class="font-bold text-2xl lg:text-4xl">Plant a Tree, Grow a Future</h1>
+                <p class="text-xs lg:text-sm opacity-80">Join our mission to plant 1 million trees and make the Earth
+                    greener for future
+                    generations.</p>
+                <button class="btn bg-[#FACC15] text-[#15803D] rounded-full text-xs lg:text-sm p-2 lg:p-5">Get
+                    Involved</button>
+            </div>
+            <img src="./assets/hero-leaf2.png" alt="">
+        </section>
+
+
+        <!-- Choose Your Trees section -->
+        <section class="choose-your-trees-section container mx-auto ">
+            <!-- Choose Your Trees -->
+            <h1 class="font-semibold lg:text-3xl text-center mb-10 text-xl">Choose Your Trees</h1>
+
+            <!-- main  -->
+            <div class="grid grid-cols-4 lg:grid-cols-12 gap-8">
+                <!-- Categories -->
+                <div class=" lg:col-span-3">
+                    <h2 class="font-bold lg:text-xl mb-4 text-lg text-center">Categories</h2>
+                    <div class="space-y-3 sticky top-8">
+                        <button class="btn btn-primary w-full" id="allTreesbtn">All Trees</button>
+
+                        <!-- Categories container -->
+                        <div id="categoriesContainer" class="flex flex-col space-y-3">
+                            <!-- Categories will be dynamically loaded here by JS -->
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Trees -->
+                <div class="col-span-2 lg:col-span-6">
+                    <div id="treesContainer" class="grid  grid-cols-1 lg:grid-cols-3 gap-5">
+
+                        <!-- cards -->
+                        <!-- dynamically added here -->
+                        <!-- <div class="card bg-white shadow-sm p-3">
+                            <figure>
+                                <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                    alt="Shoes" />
+                            </figure>
+                            <div class="card-body">
+                                <h2 class="card-title">Card Title</h2>
+                                <p class="opacity-80 line-clamp-2">A card component has a figure, a body part, and inside body there are title and
+                                    actions parts</p>
+                                    <div class="card-actions justify-between">
+                                        <div class="badge badge-soft badge-success">Success</div>
+                                        <h2 class="text-green-900 font-semibold">$500</h2>
+                                    </div>
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary w-full rounded-full">Buy Now</button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <!-- Loading spinner -->
+                    <div id="loadingSpinner" class=" justify-center items-center h-[50vh] flex hidden">
+                        <span class="loading w-[50px] loading-spinner text-success"></span>
+                    </div>
+                </div>
+
+
+                <!-- Cart -->
+                <div class="col-span-1 lg:col-span-3 bg-green-500">
+                    <h2 class="font-bold text-xl">Your Cart</h2>
+                </div>
+            </div>
+            <img src="" class="" alt="">
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

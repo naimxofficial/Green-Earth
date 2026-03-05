@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+*{
+  font-family: "Inter", sans-serif;
+}
+
+.btn-primary {
+  background-color: #15803D;
+  color: white;
+  border: none;
+}
