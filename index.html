@@ -16,6 +16,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <!-- fontawsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -32,54 +36,59 @@
                     </div>
                     <ul tabindex="-1"
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>About</a></li>
+                        <li><a href="#about">About</a></li>
                         <li>
-                            <a>Gallery</a>
+                            <a href="#choose-trees">Gallery</a>
                         </li>
-                        <li><a>Plant a Tree</a></li>
+                        <li><a href="#our-impact">Our Impact</a></li>
                     </ul>
                 </div>
                 <a class="btn btn-ghost text-xl text-white">Green Earth</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 text-white font-medium">
-                    <li><a>About</a></li>
-                    <li><a>Gallery</a></li>
-                    <li><a>Plant a Tree</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#choose-trees">Gallery</a></li>
+                    <li><a href="#our-impact">Our Impact</a></li>
                 </ul>
             </div>
             <div class="navbar-end ">
-                <a class="btn text-[#15803D] font-medium bg-[#FACC15] rounded-full">Plant a Tree</a>
+                <a href="#plant-a-tree" class="btn text-[#15803D] font-medium bg-[#FACC15] rounded-full">Plant a
+                    Tree</a>
             </div>
         </div>
     </header>
 
     <main class="space-y-15 bg-[#F0FDF4]">
 
+        <a href="#cartContainer" class="btn fixed bottom-5 right-5 z-10 "><i
+                class="fa-solid fa-cart-arrow-down"></i></a>
         <!-- Hero-Section -->
         <section class="Hero-section grid grid-cols-3 bg-[#CFF0DC] mb-2">
             <img src="./assets/hero-leaf1.png" alt="">
             <div class="space-y-2 text-center flex flex-col items-center justify-center lg:gap-3">
                 <h1 class="font-bold lg:text-4xl">Plant a Tree, Grow a Future</h1>
-                <p class="not-sm:hidden text-xs lg:text-sm opacity-80">Join our mission to plant 1 million trees and make the Earth
+                <p class="not-sm:hidden text-xs lg:text-sm opacity-80">Join our mission to plant 1 million trees and
+                    make the Earth
                     greener for future
                     generations.</p>
-                <button class=" btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-[#FACC15] text-[#15803D] rounded-full text-xs lg:text-sm lg:p-5">Get
-                    Involved</button>
+                <a href="#choose-trees"
+                    class=" btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl bg-[#FACC15] text-[#15803D] rounded-full text-xs lg:text-sm lg:p-5">Get
+                    Involved</a>
             </div>
             <img src="./assets/hero-leaf2.png" alt="">
         </section>
 
 
         <!-- Choose Your Trees section -->
-        <section class="choose-your-trees-section container mx-auto">
+        <section class="choose-your-trees-section container mx-auto" id="choose-trees">
             <!-- Choose Your Trees -->
             <h1 class="font-semibold lg:text-3xl text-center mb-10 ">Choose Your Trees</h1>
 
             <!-- main  -->
-            <div class="grid grid-cols-4 lg:grid-cols-12 gap-8">
+            <div class="grid grid-cols-5 lg:grid-cols-12 gap-8">
                 <!-- Categories -->
-                <div class=" lg:col-span-3">
+                <div class="col-span-2 lg:col-span-3">
                     <h2 class="font-bold lg:text-xl mb-4 text-center">Categories</h2>
                     <div class="space-y-3 sticky top-8">
                         <button class="btn btn-primary w-full" id="allTreesbtn">All Trees</button>
@@ -94,7 +103,7 @@
 
 
                 <!-- Trees -->
-                <div class="col-span-2 lg:col-span-6">
+                <div class="col-span-3 lg:col-span-6">
                     <div id="treesContainer" class="grid  grid-cols-1 lg:grid-cols-3 gap-5">
 
                         <!-- cards -->
@@ -127,15 +136,37 @@
 
 
                 <!-- Cart -->
-                <div class="col-span-1 lg:col-span-3 bg-green-500">
-                    <h2 class="font-bold lg:text-xl">Your Cart</h2>
+                <div class="col-span-5 lg:col-span-3 bg-white p-4 space-y-2 rounded-2xl ">
+                    <h2 class="font-semibold lg:text-xl"><i class="fa-solid fa-cart-arrow-down"></i> Your Cart</h2>
+
+                    <div id="cartContainer" class="space-y-4 lg:sticky lg:top-20">
+                        <!-- <div class=" bg-[#F0FDF4] p-3 rounded-lg">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold">Mango Tree</h3>
+                                <button class="btn btn-ghost">X</button>
+                            </div>
+                            <p class="opacity-50">৳500 x 1</p>
+                            <p class="text-right font-medium text-green-500">৳500</p>
+                        </div> -->
+                    </div>
+
+                    <!-- Empty cart -->
+                    <div class="text-center opacity-50 not-sm:text-xs" id="emptyCartMessage">
+                        <p>Your cart is empty</p>
+                        <p>Add trees to get started</p>
+                    </div>
+                    <!-- Total -->
+                    <div
+                        class=":bg-[#F0FDF4] p-3 rounded-lg flex justify-between items-center font-bold lg:text-xl lg:sticky lg:top-8">
+                        <span>Total:</span>
+                        <span id="totalPrice">৳ 0</span>
+                    </div>
                 </div>
             </div>
-            <img src="" class="" alt="">
         </section>
 
         <!-- About the Campaign -->
-        <section class="container w-11/12 mx-auto">
+        <section class="container w-11/12 mx-auto" id="about">
             <h2 class="text-center font-semibold text-xl lg:text-3xl mb-10">About the Campaign</h2>
             <div class="grid lg:grid-cols-2 justify-center items-center gap-8">
                 <img src="./assets/about.png" alt="" class="justify-self-end">
@@ -155,7 +186,7 @@
         </section>
 
         <!-- Our Impact -->
-        <section class="bg-[#CFF0DC] text-center p-[100px] mb-0">
+        <section class="bg-[#CFF0DC] text-center p-[100px] mb-0" id="our-impact">
             <h2 class="font-semibold text-2xl mb-10">Our Impact</h2>
 
             <div class="grid  lg:grid-cols-3 gap-12">
@@ -175,7 +206,7 @@
         </section>
 
         <!-- Plant a Tree Today -->
-        <section class="bg-[#166534] p-[100px] mb-0">
+        <section class="bg-[#166534] p-[100px] mb-0" id="plant-a-tree">
             <h2 class="font-semibold text-2xl mb-10 text-white text-center">Plant a Tree Today</h2>
             <div class="p-10 rounded-xl bg-[#15803D] gap-3 grid grid-rows-4  justify-self-center">
                 <input type="text" placeholder="Your Name" class="p-3 rounded-lg bg-white border-none">
@@ -191,10 +222,39 @@
             </div>
         </section>
 
-        <footer class=" text-white text-center p-6 bg-[#14532D]">
-            <p>© 2026 Green Earth. All Rights Reserved.</p>
-        </footer>
+
     </main>
+    <footer class=" text-white text-center p-6 bg-[#14532D]">
+        <p>© 2026 Green Earth. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="showTreeDetail.showModal()">open modal</button> -->
+    <dialog id="showTreeDetail" class="modal">
+        <div class="modal-box">
+            <figure>
+                <img id="modalImage" alt="Tree image" class="object-cover w-full h-50" />
+            </figure>
+            <div class="card-body">
+                <h2 id="modalTitle" class="card-title"></h2>
+                <p id="modalDescription" class="opacity-80"></p>
+                <div class="card-actions justify-between">
+                    <div id="modalCategory" class="badge badge-soft badge-success"></div>
+                    <h2 id="modalPrice" class="text-green-900 font-semibold"></h2>
+                </div>
+                <!-- <div class="card-actions justify-end">
+                    <button class="btn btn-primary w-full rounded-full" >Add to Cart</button>
+                </div> -->
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
     <script src="./script.js"></script>
 </body>
 
