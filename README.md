@@ -4,7 +4,7 @@
 
 Green Earth is a global tree plantation campaign website where users can browse trees by category, view detailed info, add trees to a cart, and donate to the cause. Built to raise awareness and make contributing to a greener planet as easy as a few clicks.
 
-🌐 **Live Site:** *(add your live URL here)*
+🌐 **Live Site:** *https://naimxofficial.github.io/Green-Earth/*
 
 ---
 
@@ -38,3 +38,5 @@ Green Earth is a global tree plantation campaign website where users can browse 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![FontAwesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=flat&logo=fontawesome&logoColor=white)
 ![Google Fonts](https://img.shields.io/badge/Inter%20Font-4285F4?style=flat&logo=google&logoColor=white)
+
+---
