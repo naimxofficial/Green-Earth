@@ -39,8 +39,4 @@ Green Earth is a global tree plantation campaign website where users can browse 
 ![FontAwesome](https://img.shields.io/badge/Font%20Awesome-528DD7?style=flat&logo=fontawesome&logoColor=white)
 ![Google Fonts](https://img.shields.io/badge/Inter%20Font-4285F4?style=flat&logo=google&logoColor=white)
 
-<<<<<<< HEAD
 ---
-=======
----
->>>>>>> 2adf2d7a5d1e76b7658b4fd31151529bb6d9edb7
