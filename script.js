@@ -28,7 +28,7 @@ async function loadCategories() {
 }
 
 async function selectCategory(categoryid, btn) {
-    showLoading();
+    showL\oading();
     const allButtons = document.querySelectorAll(
         "#categoriesContainer button , #allTreesbtn",
     );
